@@ -23,11 +23,11 @@ REDUCED_TASKS = [
     'root_pitch_class', 'bass_pitch_class', 'tonicized_pitch_class'
 ]
 
-AUDIOS_FILEPATH = '/storage/datasets/thiago.poppe/TheoryTabDB/audios.h5'
-LABELS_FILEPATH = '/storage/datasets/thiago.poppe/TheoryTabDB/segments/labels.h5'
-VAMP_FEATURES_FILEPATH = '/storage/datasets/thiago.poppe/TheoryTabDB/segments/vamp_features.h5'
-THEORYTAB_DATASET_FILEPATH = '/storage/datasets/thiago.poppe/TheoryTabDB/theorytab_dataset.json'
-STRATIFICATION_INFO_FILEPATH = '/storage/datasets/thiago.poppe/TheoryTabDB/stratification_info.json'
+AUDIOS_FILEPATH = '<insert-path>'
+LABELS_FILEPATH = '<insert-path>'
+VAMP_FEATURES_FILEPATH = '<insert-path>'
+THEORYTAB_DATASET_FILEPATH = '<insert-path>'
+STRATIFICATION_INFO_FILEPATH = '<insert-path>'
 
 MODE_INTERVALS = {
     'major': [2, 2, 1, 2, 2, 2],
@@ -51,8 +51,8 @@ QUALITY_INTERVALS = {
 ACCIDENTAL_MAP = {'bb': -2, 'b': -1, '': 0, '#': 1, '##': 2}
 DEGREE_MAP = {'I': 0, 'II': 1, 'III': 2, 'IV': 3, 'V': 4, 'VI': 5, 'VII': 6}
 
-with open('/storage/datasets/thiago.poppe/TheoryTabDB/tasks_metadata/task_sizes.json', 'r') as fp:
+with open('<insert-path>', 'r') as fp:
     TASK_SIZES = json.load(fp)
 
-with open('/storage/datasets/thiago.poppe/TheoryTabDB/tasks_metadata/task_domains.json', 'r') as fp:
+with open('<insert-path>', 'r') as fp:
     TASK_DOMAINS = json.load(fp)

@@ -49,7 +49,7 @@ def main():
         for theorytab_id, theorytab in theorytab_dataset.items() if theorytab_id in theorytab_ids_to_keep
     }
 
-    with h5py.File('/storage/datasets/thiago.poppe/TheoryTabDB/segments/labels.h5', 'w') as h5f:
+    with h5py.File('<insert-path>', 'w') as h5f:
         for theorytab_id, theorytab in tqdm(theorytab_dataset.items()):
             labels = encode_labels(theorytab)
             labels_segments = view_as_windows(labels, (len(ALL_TASKS), WINDOW_SIZE), (len(ALL_TASKS), STEP_SIZE)).squeeze(0)

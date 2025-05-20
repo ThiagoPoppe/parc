@@ -43,8 +43,8 @@ FLATS_ACCIDENTALS_ORDER = [6, 2, 5, 1, 4, 0, 3]
 ACCIDENTAL_TO_SCALE_MODE = {'b': 'minor', '0': 'major', '-2': 'dorian', '-4': 'phrygian', 
                             '1': 'lydian', '-1': 'mixolydian', '-3': 'minor', '-5': 'locrian'}
 
-DUMPED_DB_FILEPATH = '/storage/datasets/thiago.poppe/TheoryTabDB/theorytab_db_dump.json'
-PROCESSED_DB_FILEPATH = '/storage/datasets/thiago.poppe/TheoryTabDB/processed_theorytab_db.json'
+DUMPED_DB_FILEPATH = '<insert-path>'
+PROCESSED_DB_FILEPATH = '<insert-path>'
 
 logging.basicConfig(
     level=logging.INFO,
