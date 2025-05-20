@@ -1,29 +1,3 @@
-"""
-    Esse script irá converter os dados dumped do TheoryTab coletados via crawler para o seguinte formato json:
-
-    -> num_beats = indicando quantas beats nós temos no trecho da música
-    -> youtube = chave contendo informações do áudio do YouTube (id, que pode ser none, start e end para sincronizar [acho que é em segundos])
-    -> notes = chave contendo informações de notas (sd = scale_degree, octave, onset, offset, is_rest)
-    -> chords = chave contendo informações de acordes (root, onset, offset, type, inversion, applied, adds, omits, alterations, suspensions, substitutions, borrowed, is_rest)
-        * borrowed pode ser uma string (major, minor, etc) ou uma lista com 7 valores indicando um "template" da escala emprestada.
-    -> keys = chave contendo informações dos tons (onset, offset, scale, tonic)
-    -> tempos = chave contendo informações sobre tempo (onset, offset, bpm, swing_factor, swing_beat)
-    -> meters = chave contendo informações sobre fórmula de compasso (onset, offset, beats_in_measure, beat_unit)
-
-    Então, teremos a base coletada em formato json, indexado pelo ID das músicas, em um formato padronizado!
-
-    Observação
-    ----------
-        O script também oferece parâmetros opcionais para realizar o processamento do arquivo dumped para um formato mais padronizado.
-        São eles:
-            - min_bpm: valor mínimo de BPM para filtrar músicas lentas (default = 40)
-            - max_bpm: valor máximo de BPM para filtrar músicas rápidas (default = 300)
-            - allow_swing: se True, permite swing, ou seja músicas com swing_factor != 0 (default = False)
-            - keep_only_4x4: se True, mantém apenas músicas com compasso 4/4 (default = True)
-
-        * A configuração escolhida de parâmetros será salva em um arquivo readme.txt junto do arquivo .json processado.
-"""
-
 import os
 import re
 import h5py
